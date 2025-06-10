@@ -1,31 +1,62 @@
-'use client'
-import { motion, useMotionTemplate, useScroll, useSpring, useTransform } from 'framer-motion'
+'use client';
+import {
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useSpring,
+  useTransform,
+} from 'framer-motion';
 
-    const springvars = {
-        stiffness: 120,
-        damping: 14,
-    };
+const springvars = {
+  stiffness: 100,
+  damping: 20,
+};
 
 export default function Hero() {
-    const { scrollYProgress }= useScroll();
-    const masksize = useSpring(useTransform(scrollYProgress, [0, 1], ['14000', '400']),springvars);
-    const maskposition = useTransform(scrollYProgress, [0, 1], ['-1200', '100']);
+  const { scrollYProgress } = useScroll();
+
+  const masksize = useSpring(
+    useTransform(scrollYProgress, [0, 0.8], ['500', '20000']),
+    springvars
+  );
+
+  const imagescale = useTransform(scrollYProgress, [0, 1], ['0.8', '1']);
+  const outerImageOpacity = useTransform(scrollYProgress, [0.2, 0.4], ['0', '1']);
+  const whitefillopacity = useTransform(scrollYProgress, [0.2, 0.4], ['1', '0']);
+  const innerImageOpacity = useTransform(scrollYProgress, [0.1, 0.2], ['0', '1']); 
 
   return (
-    <div className="h-[300vh]">
-        {/* <motion.div className='flex inset-0 h-full w-full bg-[url(/bg.png)] bg-cover bg-fixed'>
-        </motion.div> */}
+    <div className="h-[150vh] bg-[#141414]">
+      <motion.div
+        className="fixed inset-0 h-full w-full bg-[url(/bg.png)] bg-cover bg-fixed"
+        style={{
+          scale: imagescale,
+          opacity: outerImageOpacity,
+        }}
+      />
+
+      <motion.div
+        className="fixed flex inset-0 w-full h-full [mask-image:url(/alxn1.svg)] [mask-repeat:no-repeat]"
+        style={{
+          maskSize: useMotionTemplate`${masksize}px`,
+          maskPosition: useMotionTemplate`center`,
+        }}
+      >
+        <motion.div
+          className="flex inset-0 h-full w-full bg-[url(/bg.png)] bg-cover bg-fixed"
+          style={{
+            scale: imagescale,
+            opacity: innerImageOpacity, 
+          }}
+        />
 
         <motion.div
-        className='fixed flex inset-0 w-full h-full [mask-image:url(/alxn1.svg)] [mask-repeat:no-repeat] bg-white/40'
-        style = {{
-            maskSize: useMotionTemplate`${masksize}px`,
-            maskPosition: useMotionTemplate`center ${maskposition}px`,
-        }}
-        >
-        <motion.div className='flex inset-0 h-full w-full bg-[url(/bg.png)] bg-cover bg-fixed'>
-        </motion.div>
-        </motion.div>
+          className="fixed inset-0 h-full w-full bg-black"
+          style={{
+            opacity: whitefillopacity,
+          }}
+        />
+      </motion.div>
     </div>
   );
 }

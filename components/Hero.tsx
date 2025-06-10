@@ -17,28 +17,62 @@ export default function Hero() {
   const { scrollYProgress } = useScroll();
     
   const masksize = useSpring(
-    useTransform(scrollYProgress, [0, 0.8], [800, 30000]),
+    useTransform(scrollYProgress, [0, 0.8], [400, 30000]),
     springvars
   );
     
   const imagescale = useTransform(scrollYProgress, [0, 1], [0.8, 1.19]);
   const whitefillopacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-  const innerImageOpacity = useTransform(scrollYProgress, [0, 0.1,0.45], [0, 1,0]);
-  const outerImageOpacity = useTransform(scrollYProgress, [0.05, 0.35, 0.45], [0, 1, 0]); 
+
+  // Slightly earlier fade out for inner image to ensure smooth transition
+  const innerImageOpacity = useTransform(scrollYProgress, [0, 0.1, 0.44, 0.45], [0, 1, 1, 0]);
+
+  // Outer image fades out slightly earlier as well
+  const outerImageOpacity = useTransform(scrollYProgress, [0.05, 0.44, 0.45], [0, 1, 0]); 
+  
   const maskContainerOpacity = useTransform(scrollYProgress, [0.75, 0.8], [1, 0]);
   const maskPointerEvents = useTransform(scrollYProgress, [0.8, 0.85], [1, 0]);
 
-  const outerPortfolioScrollable = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
-    
+  // Start the scrollable portfolio slightly earlier with a more gradual fade-in
+  const outerPortfolioScrollable = useTransform(scrollYProgress, [0.44, 0.46], [0, 1]);
+
+  // Intro elements opacity remains the same
+  const introElementsOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+
+  // Adjust the Y transform to start the transition earlier
+  const mainContentY = useTransform(scrollYProgress, [0.44, 0.46], ['10vh', '0vh']);
+
   return (
     <div className="relative">
+        <motion.div
+            className="fixed inset-x-0 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center z-30 pointer-events-none"
+            style={{ opacity: introElementsOpacity }}
+        >
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-white text-base md:text-lg lg:text-xl font-semibold mb-2"
+            >
+                Scroll Down
+            </motion.div>
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="text-white text-4xl md:text-5xl lg:text-6xl animate-bounce"
+            >
+                👇
+            </motion.div>
+        </motion.div>
+
       <div className="h-[120vh] relative">
         <motion.div
           className="fixed inset-0 h-full w-full flex justify-center"
           style={{
             scale: imagescale,
-            opacity: outerImageOpacity, // This will now animate to 0 as scroll progress passes 0.55
-            pointerEvents: useMotionTemplate`${outerPortfolioScrollable.get() > 0.5 ? 'auto' : 'none'}`,
+            opacity: outerImageOpacity,
+            pointerEvents: useMotionTemplate`${outerImageOpacity.get() > 0.1 ? 'auto' : 'none'}`,
           }}
         >
           <PortfolioComponent />
@@ -79,6 +113,7 @@ export default function Hero() {
         className="relative z-20 min-h-screen w-full bg-black"
         style={{
           opacity: outerPortfolioScrollable,
+          y: mainContentY
         }}
       >
         <PortfolioComponent />

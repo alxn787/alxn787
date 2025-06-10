@@ -1,5 +1,6 @@
 'use client';
 import { Mail} from 'lucide-react';
+import { Clock } from './Clock';
 
 export const PortfolioComponent = () => {
   const projects = [
@@ -27,34 +28,27 @@ export const PortfolioComponent = () => {
 
   return (
     <div className="bg-black text-neutral-200 font-sans leading-relaxed">
-      <div className="max-w-4xl mx-auto p-4 md:p-8">
+      <div className="max-w-2xl mx-auto p-4 md:p-8">
+        <div className='h-20'></div>
 
-        {/* --- Header / Hero Section --- */}
-        <header className="text-center py-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-neutral-50 mb-2">
-            Alex Nelson
-          </h1>
-          <p className="text-lg md:text-xl text-cyan-400">
-            Creative Frontend Developer
-          </p>
-          <p className="max-w-xl mx-auto mt-4 text-neutral-400">
-            I build elegant, responsive, and user-friendly web applications that solve real-world problems.
-          </p>
-        </header>
-
+        <div className='flex justify-between'>
+            <div>
+                <h1 className=" text-neutral-50 font-serif text-[2.5rem]">
+                    Alen Abraham
+                </h1>
+            </div>
+            <div className='translate-y-5'>
+                <Clock />
+            </div>
+        </div>
+        <div className='h-5'></div>
         <main>
-          {/* --- About Me Section --- */}
-          <section id="about" className="my-16">
-            <h2 className="text-3xl font-bold text-neutral-100 mb-6">About Me</h2>
+            <h5 className="text-2xl font-bold text-neutral-100 mb-2">About Me</h5>
             <div className="text-neutral-300 space-y-4">
               <p>
                 Hello! I'm Alex, a developer with a passion for creating beautiful and functional digital experiences. With a background in design, I bring a unique perspective to my development work, focusing on pixel-perfect details and intuitive user flows.
               </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or hiking in the great outdoors. I'm always eager to learn and collaborate with others.
-              </p>
             </div>
-          </section>
 
           {/* --- Projects Section --- */}
           <section id="projects" className="my-16">

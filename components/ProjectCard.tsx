@@ -17,7 +17,7 @@ export default function ProjectCard({
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative flex flex-col items-center justify-between  rounded-lg p-10 transition-all duration-200 hover:-translate-y-1 hover:shadow-md dark:hover:shadow-lg min-w-[18rem] min-h-[18rem] w-full h-full overflow-hidden"
+      className="relative flex flex-col items-center justify-between  rounded-xl p-10 transition-all duration-200 hover:-translate-y-1 hover:shadow-md dark:hover:shadow-lg min-w-[16rem] min-h-[16rem] w-full h-full overflow-hidden cursor-pointer border border-white/10"
     >
       <div
         className={`absolute inset-0 bg-center bg-cover transition-all duration-500 ease-out transform rounded-lg z-0
@@ -26,10 +26,18 @@ export default function ProjectCard({
         style={{ backgroundImage: `url(${Imageurl})`}}
 
       />
+
+        <div
+            className={`absolute bottom-0 left-0 right-0 h-24 
+                bg-gradient-to-t from-black/90 via-black/70 to-transparent 
+                 transition-all duration-500 
+                ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+        />
+
         <div>
 
         </div>
-        <div className="relative z-20 text-center gap-4">
+        <div className={`${isHovered}== true ? visibility:visible  : visibility:hidden text-center gap-4`}>
             <h3 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-1">
             {Title}
             </h3>
@@ -39,9 +47,6 @@ export default function ProjectCard({
             </p>
         </div>
 
-        {isHovered && (
-        <div className="absolute inset-0 bg-black/10 rounded-lg z-10 transition-opacity duration-300" />
-        )}
     </div>
   );
 }

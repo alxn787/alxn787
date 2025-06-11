@@ -48,8 +48,11 @@ export const PortfolioComponent = () => {
                 </h2>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <ProjectCard Title='AlgoRush' Description='Matiks for DSA.' Imageurl='algorush.png' />
+                <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' />
+                <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' />
+                <ProjectCard Title='Probo' Description='Opinion Trading Platform' Imageurl='lg.png' />
             </div>
 
 

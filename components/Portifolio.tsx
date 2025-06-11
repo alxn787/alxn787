@@ -27,7 +27,7 @@ export const PortfolioComponent = () => {
   const skills = ["JavaScript (ES6+)", "React & Next.js", "Node.js", "Tailwind CSS", "Python", "Figma", "Firebase", "Git & GitHub"];
 
   return (
-    <div className="bg-black text-neutral-200 font-sans leading-relaxed">
+    <div className="bg-[#000000] text-neutral-200 font-sans leading-relaxed">
       <div className="max-w-2xl mx-auto p-4 md:p-8">
         <div className='h-20'></div>
 
@@ -41,34 +41,32 @@ export const PortfolioComponent = () => {
                 <Clock />
             </div>
         </div>
-        <div className='h-5'></div>
+        <div className='h-4'></div>
         <main>
             <h5 className="text-2xl font-bold text-neutral-100 mb-2">About Me</h5>
             <div className="text-neutral-300 space-y-4">
-              <p>
-                Hello! I'm Alex, a developer with a passion for creating beautiful and functional digital experiences. With a background in design, I bring a unique perspective to my development work, focusing on pixel-perfect details and intuitive user flows.
+              <p className='text-md'>
+                Hello! I'm Alen, a 21 y/o CS student at IIIT Kota who loves to dabble around tech . <br></br>I'm a Developer, trader who has a particular interest about equity derivatives and tech in finance. I play the guitar and do competitive programmming when im bored.
               </p>
             </div>
-
-          <section id="projects" className="my-16">
-            <h2 className="text-3xl font-bold text-neutral-100 mb-8">Featured Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projects.map((project, index) => (
-                <div key={index} className="bg-neutral-900/50 border border-neutral-800 rounded-lg p-6 hover:border-cyan-400/50 transition-colors duration-300">
-                  <h3 className="text-xl font-semibold text-neutral-50 mb-2">{project.title}</h3>
-                  <p className="text-neutral-400 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="bg-neutral-800 text-cyan-300 text-xs font-medium px-2.5 py-1 rounded-full">{tag}</span>
-                    ))}
-                  </div>
-                  <a href={project.link} className="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
-                    View Project &rarr;
-                  </a>
-                </div>
-              ))}
+            <div className='h-10'></div>
+            <div>
+                <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
+                    Experience
+                </h2>
             </div>
-          </section>
+            <div className='flex justify-between mt-3'>
+                <div className='text-lg font-semibold'>Cointracker</div>
+                <div className=' text-white/50'>Nov 2024 - Feb 2025</div>
+            </div>
+
+            <div className='h-10'></div>
+             <div>
+                <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
+                    PROJECTS
+                </h2>
+            </div>
+
 
           <section id="skills" className="my-16">
             <h2 className="text-3xl font-bold text-neutral-100 mb-6">Core Skills</h2>

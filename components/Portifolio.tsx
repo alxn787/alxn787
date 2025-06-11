@@ -1,28 +1,9 @@
 'use client';
 import { Mail} from 'lucide-react';
 import { Clock } from './Clock';
+import ProjectCard from './ProjectCard';
 
 export const PortfolioComponent = () => {
-  const projects = [
-    {
-      title: "Project One",
-      description: "A brief and engaging description of your project. Highlight the key technologies and the problem it solves.",
-      tags: ["React", "Node.js", "MongoDB"],
-      link: "#"
-    },
-    {
-      title: "Project Two",
-      description: "Explain what this project is about and what you learned from it. Keep it concise and impactful.",
-      tags: ["Next.js", "Tailwind CSS", "Vercel"],
-      link: "#"
-    },
-    {
-      title: "Project Three",
-      description: "Showcase another key project. Mention your specific role and contributions if it was a team effort.",
-      tags: ["Python", "Flask", "PostgreSQL"],
-      link: "#"
-    },
-  ];
 
   const skills = ["JavaScript (ES6+)", "React & Next.js", "Node.js", "Tailwind CSS", "Python", "Figma", "Firebase", "Git & GitHub"];
 
@@ -46,7 +27,7 @@ export const PortfolioComponent = () => {
             <h5 className="text-2xl font-bold text-neutral-100 mb-2">About Me</h5>
             <div className="text-neutral-300 space-y-4">
               <p className='text-md'>
-                Hello! I'm Alen, a 21 y/o CS student at IIIT Kota who loves to dabble around tech . <br></br>I'm a Developer, trader who has a particular interest about equity derivatives and tech in finance. I play the guitar and do competitive programmming when im bored.
+                Hello! I'm Alen, a 21 y/o CS student at IIIT Kota who loves to dabble around tech . <br></br>I'm a Developer, trader who has a particular interest about equity derivatives and tech in finance. I play the  piano/guitar and do competitive programmming when im bored.
               </p>
             </div>
             <div className='h-10'></div>
@@ -65,6 +46,10 @@ export const PortfolioComponent = () => {
                 <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
                     PROJECTS
                 </h2>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                <ProjectCard Title='AlgoRush' Description='Matiks for DSA.' Imageurl='algorush.png' />
             </div>
 
 

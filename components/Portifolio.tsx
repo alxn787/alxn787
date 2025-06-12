@@ -39,7 +39,7 @@ export const PortfolioComponent = () => {
             <h5 className="text-2xl font-bold text-neutral-100 mb-2">About Me</h5>
             <div className="text-neutral-300 space-y-4">
               <p className='text-md'>
-                Hello! I'm Alen, a 21 y/o CS student at IIIT Kota who loves to try anything new. <br></br>I'm a dev, trader who is particularly interested about how tech works in finance.<br></br> I play the  piano/guitar and learn animations when im bored.
+                Hello! I&rsquo;m Alen, a 21 y/o CS student at IIIT Kota who loves to try anything new. <br></br>I&rsquo;m a dev, trader who is particularly interested about how tech works in finance.<br></br> I play the  piano/guitar and learn animations when im bored.
               </p>
             </div>
             <div className='h-5'></div>

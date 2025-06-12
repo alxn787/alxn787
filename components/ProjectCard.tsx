@@ -17,7 +17,7 @@ export default function ProjectCard({
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative flex flex-col items-center justify-between  rounded-xl p-10 transition-all duration-200 hover:-translate-y-1 hover:shadow-md dark:hover:shadow-lg min-w-[16rem] min-h-[16rem] w-full h-full overflow-hidden cursor-pointer border border-white/10"
+      className="relative flex flex-col items-center justify-between  rounded-xl p-10 transition-all duration-200 hover:-translate-y-1 hover:shadow-md dark:hover:shadow-lg min-w-[16rem] min-h-[16rem] w-full h-full overflow-hidden cursor-pointer "
     >
       <div
         className={`absolute inset-0 bg-center bg-cover transition-all duration-500 ease-out transform rounded-lg z-0

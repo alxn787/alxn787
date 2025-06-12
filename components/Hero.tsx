@@ -10,7 +10,7 @@ import { PortfolioComponent } from './Portifolio';
 
 const springvars = {
   stiffness: 100,
-  damping: 20,
+  damping: 10,
 };
 
 export default function Hero() {

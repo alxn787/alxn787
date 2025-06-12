@@ -1,5 +1,4 @@
 'use client';
-import { Mail} from 'lucide-react';
 import { Clock } from './Clock';
 import ProjectCard from './ProjectCard';
 import { FileTextIcon } from './resumeicon';
@@ -43,7 +42,7 @@ export const PortfolioComponent = () => {
             <h5 className="text-2xl font-bold text-neutral-100 mb-2">About Me</h5>
             <div className="text-neutral-300 space-y-4">
               <p className='text-md'>
-                Hello! I'm Alen, a 21 y/o CS student at IIIT Kota who loves to dabble around tech . <br></br>I'm a Developer, trader who has a particular interest about equity derivatives and tech in finance. I play the  piano/guitar and do competitive programmming when im bored.
+                Hello! I'm Alen, a 21 y/o CS student at IIIT Kota who loves to try anything new. <br></br>I'm a dev, trader who is particularly interested about how tech works in finance.<br></br> I play the  piano/guitar and learn animations when im bored.
               </p>
             </div>
             <div className='h-5'></div>
@@ -70,7 +69,7 @@ export const PortfolioComponent = () => {
                 </h2>
             </div>
             <div className='flex justify-between mt-3'>
-                <div className='text-lg font-semibold'>Cointracker</div>
+                <div className='text-lg font-semibold text-white/90'>CoinTracker</div>
                 <div className=' text-white/50'>Nov 2024 - Feb 2025</div>
             </div>
 
@@ -83,10 +82,10 @@ export const PortfolioComponent = () => {
             <div className='h-5'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                <ProjectCard Title='AlgoRush' Description='Matiks for DSA.' Imageurl='algorush.png' />
-                <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' />
-                <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' />
-                <ProjectCard Title='Probo' Description='Opinion Trading Platform' Imageurl='lg.png' />
+                <ProjectCard Title='AlgoRush' Description='Matiks for DSA.' Imageurl='algorush.png' url='https://www.algorush.live/' />
+                <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' url='https://superdm.xyz/' />
+                <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' url='https://ezwallet-six.vercel.app/' />
+                <ProjectCard Title='Probo' Description='Opinion Trading Platform' Imageurl='lg.png' url='https://ezwallet-six.vercel.app/'/>
             </div>
             <div
             onClick={scrollToSection}
@@ -113,20 +112,8 @@ export const PortfolioComponent = () => {
           </section>
         </main>
 
-        {/* --- Footer Section --- */}
         <footer className="text-center py-12 border-t border-neutral-800 mt-16">
-           <h3 className="text-2xl font-bold text-neutral-100 mb-4">Get In Touch</h3>
-           <p className="text-neutral-400 mb-6">
-             I'm currently open to new opportunities and collaborations.
-           </p>
-          <div className="flex justify-center gap-6">
-            <a href="mailto:email@example.com" className="text-neutral-400 hover:text-cyan-400 transition-colors"><Mail size={24} /></a>
-          </div>
-          <p className="text-neutral-600 text-sm mt-8">
-            &copy; {new Date().getFullYear()} Alex Nelson. All Rights Reserved.
-          </p>
         </footer>
-
       </div>
     </div>
   );

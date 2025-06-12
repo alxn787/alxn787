@@ -86,7 +86,7 @@ export const PortfolioComponent = () => {
             </div>
             <div
             onClick={scrollToSection}
-            className='text-white/50 flex justify-center'>
+            className='text-white/50 flex justify-center cursor-pointer'>
                 More Projects on Github!
             </div>
 

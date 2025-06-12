@@ -134,8 +134,7 @@ const LinkedinIcon = forwardRef<LinkedinIconHandle, LinkedinIconProps>(
 
     return (
       <div
-        //@ts-expect-error
-        className={cn(className)}
+        className={cn(className??"")}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         {...props}

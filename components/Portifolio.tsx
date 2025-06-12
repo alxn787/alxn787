@@ -5,7 +5,6 @@ import { FileTextIcon } from './resumeicon';
 import { GithubIcon } from './Githubicon';
 import { TwitterIcon } from './TwitterIcon';
 import { LinkedinIcon } from './linkedin';
-import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 
 export const PortfolioComponent = () => {
@@ -18,7 +17,6 @@ export const PortfolioComponent = () => {
     sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-
   const skills = ["Next.js", "Typescript","Framer Motion","Figma", "C++"];
 
   return (
@@ -26,7 +24,7 @@ export const PortfolioComponent = () => {
       <div className="max-w-2xl mx-auto p-4 md:p-8">
         <div className='h-20'></div>
 
-        <div             ref={sectionRef} className='flex justify-between'>
+        <div  ref={sectionRef} className='flex justify-between'>
             <div>
                 <h1 className=" text-neutral-50 font-serif text-[2.5rem]">
                     Alen Abraham

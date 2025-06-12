@@ -109,7 +109,7 @@ const GithubIcon = forwardRef<GithubIconHandle, GithubIconProps>(
 
     return (
       <div
-      //@ts-ignore
+      //@ts-expect-error
         className={cn(className)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

@@ -75,7 +75,7 @@ const TwitterIcon = forwardRef<TwitterIconHandle, TwitterIconProps>(
 
     return (
       <div
-      //@ts-ignore
+      //@ts-expect-error
         className={cn(className)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

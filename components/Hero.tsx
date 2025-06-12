@@ -9,8 +9,8 @@ import {
 import { PortfolioComponent } from './Portifolio';
 
 const springvars = {
-  stiffness: 100,
-  damping: 10,
+  stiffness: 200,
+  damping: 50,
 };
 
 export default function Hero() {
@@ -30,7 +30,6 @@ export default function Hero() {
   const maskContainerOpacity = useTransform(scrollYProgress, [0.75, 0.8], [1, 0]);
   const maskPointerEvents = useTransform(scrollYProgress, [0.8, 0.85], [1, 0]);
   const outerPortfolioScrollable = useTransform(scrollYProgress, [0.44, 0.46], [0, 1]);
-  const introElementsOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   const mainContentY = useTransform(scrollYProgress, [0.44, 0.46], ['10vh', '0vh']);
 

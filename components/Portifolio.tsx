@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 
 export const PortfolioComponent = () => {
-    const router = useRouter();
     const handleOpenInNewTab = (url: string) => {
     window.open(url, '_blank');
 };

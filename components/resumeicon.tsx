@@ -57,7 +57,7 @@ const FileText = forwardRef<FileTextIconHandle, FileTextIconProps>(
 
     return (
       <div
-      //@ts-ignore
+      //@ts-expect-error
         className={cn(className)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

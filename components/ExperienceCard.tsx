@@ -28,9 +28,13 @@ export default function ExperienceCard({
           arrowRef.current?.stopAnimation();
         }}
       >
-        <div className="text-lg font-semibold text-white/90 flex items-center gap-1">
+        <div className="text-lg font-semibold text-white/90 flex items-center justify-center gap-1">
+        <div>
           {Name}
-          <ArrowHover className="mt-1" ref={arrowRef} />
+        </div>
+        <div className='mt-1'>
+          <ArrowHover className="" ref={arrowRef} />
+        </div>
         </div>
         <div className="text-white/50">{Duration}</div>
       </div>

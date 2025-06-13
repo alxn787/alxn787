@@ -92,7 +92,7 @@ export const PortfolioComponent = () => {
 
 
           <motion.div 
-          whileInView={{scale: 1.05, opacity: 1}}
+          whileInView={{scale: 1.02, opacity: 1}}
           transition={{duration: 0.5}}
           id="skills" 
           className="my-16">

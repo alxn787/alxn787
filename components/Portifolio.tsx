@@ -6,6 +6,7 @@ import { GithubIcon } from './Githubicon';
 import { TwitterIcon } from './TwitterIcon';
 import { LinkedinIcon } from './linkedin';
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
 
 export const PortfolioComponent = () => {
@@ -67,7 +68,7 @@ export const PortfolioComponent = () => {
                 </h2>
             </div>
             <ExperienceCard Name='CoinTracker' Duration='Nov 2024 - Feb 2025' Description='I worked on the CoinTracker project, which was a web application that allowed users to track their cryptocurrency holdings' />
-            
+
             <div className='h-10'></div>
             <div>
                 <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
@@ -90,7 +91,11 @@ export const PortfolioComponent = () => {
 
 
 
-          <section id="skills" className="my-16">
+          <motion.div 
+          whileInView={{scale: 1.05, opacity: 1}}
+          transition={{duration: 0.5}}
+          id="skills" 
+          className="my-16">
             <div>
                 <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
                     SKILLS
@@ -104,7 +109,7 @@ export const PortfolioComponent = () => {
                  </span>
               ))}
             </div>
-          </section>
+          </motion.div>
         </main>
 
         <footer className="text-center py-12 border-t border-neutral-800 mt-16">

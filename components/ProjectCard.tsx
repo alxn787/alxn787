@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useInView } from 'react-intersection-observer';
 
 export default function ProjectCard({
   Title,
@@ -15,12 +16,25 @@ export default function ProjectCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
   function handleOpenInNewTab(url:string){
     window.open(url, '_blank');
   }
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+    useEffect(() => {
+    if (isMobile) {
+      setIsHovered(inView);
+    }
+    }, [inView, isMobile]);
 
   return (
     <div
+      ref={ref}
       onClick={()=>handleOpenInNewTab(url)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

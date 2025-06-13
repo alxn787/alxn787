@@ -19,11 +19,10 @@ export default function ExperienceCard({
   return (
     <div>
       <div
-        className="flex justify-between mt-3"
-        onClick={()=>setIsOpen(!isOpen)}
+        className="flex justify-between mt-3 cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
         onMouseEnter={() => {
           arrowRef.current?.startAnimation();
-
         }}
         onMouseLeave={() => {
           arrowRef.current?.stopAnimation();
@@ -31,7 +30,7 @@ export default function ExperienceCard({
       >
         <div className="text-lg font-semibold text-white/90 flex items-center gap-1">
           {Name}
-          <ArrowHover ref={arrowRef} />
+          <ArrowHover className="mt-1" ref={arrowRef} />
         </div>
         <div className="text-white/50">{Duration}</div>
       </div>
@@ -40,11 +39,11 @@ export default function ExperienceCard({
         {isOpen && (
           <motion.div
             key="desc"
-            initial={{ opacity: 0, scaleY: 0 }}
-            animate={{ opacity: 1, scaleY: 1 }}
-            exit={{ opacity: 0, scaleY: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="bg-black text-white rounded-lg mt-2 text-sm"
+            initial={{ opacity: 0, scaleY: 0.95, filter: 'blur(8px)' }}
+            animate={{ opacity: 1, scaleY: 1, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, scaleY: 0.95, filter: 'blur(8px)' }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="origin-top bg-black text-white rounded-lg mt-2 text-sm"
           >
             {Description}
           </motion.div>

@@ -6,6 +6,7 @@ import { GithubIcon } from './Githubicon';
 import { TwitterIcon } from './TwitterIcon';
 import { LinkedinIcon } from './linkedin';
 import { useRef } from 'react';
+import ExperienceCard from './ExperienceCard';
 
 export const PortfolioComponent = () => {
     const handleOpenInNewTab = (url: string) => {
@@ -65,11 +66,8 @@ export const PortfolioComponent = () => {
                     Experience
                 </h2>
             </div>
-            <div className='flex justify-between mt-3'>
-                <div className='text-lg font-semibold text-white/90'>CoinTracker</div>
-                <div className=' text-white/50'>Nov 2024 - Feb 2025</div>
-            </div>
-
+            <ExperienceCard Name='CoinTracker' Duration='Nov 2024 - Feb 2025' Description='I worked on the CoinTracker project, which was a web application that allowed users to track their cryptocurrency holdings' />
+            
             <div className='h-10'></div>
             <div>
                 <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
@@ -79,7 +77,7 @@ export const PortfolioComponent = () => {
             <div className='h-5'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                <ProjectCard Title='AlgoRush' Description='Matiks for DSA.' Imageurl='algorush.png' url='https://www.algorush.live/' />
+                <ProjectCard Title='AlgoRush' Description='Matiks for DSA. 300+users' Imageurl='algorush.png' url='https://www.algorush.live/' />
                 <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' url='https://superdm.xyz/' />
                 <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' url='https://ezwallet-six.vercel.app/' />
                 <ProjectCard Title='FitFrame' Description='AI powered Fitness App' Imageurl='fitframe.png' url='https://fit-frame.vercel.app/'/>

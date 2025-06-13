@@ -29,9 +29,11 @@ export default function Hero() {
   
   const maskContainerOpacity = useTransform(scrollYProgress, [0.75, 0.8], [1, 0]);
   const maskPointerEvents = useTransform(scrollYProgress, [0.8, 0.85], [1, 0]);
-  const outerPortfolioScrollable = useTransform(scrollYProgress, [0.44, 0.46], [0, 1]);
+  const outerPortfolioScrollable = useTransform(scrollYProgress, [0.4, 0.46], [0, 1]);
 
   const mainContentY = useTransform(scrollYProgress, [0.44, 0.46], ['10vh', '0vh']);
+  const blurValue = useMotionTemplate`blur(${useTransform(scrollYProgress, [0.4, 0.46], [10, 0])}px)`;
+
 
   return (
     <div className="relative">
@@ -81,10 +83,15 @@ export default function Hero() {
       </div>
       
       <motion.div
+        animate={{filter: 'blur(0px)'}}
+        initial={{filter: 'blur(10px)'}}
+        transition={{duration: 0.3}}
+
         className="relative z-20 min-h-screen w-full bg-black"
         style={{
           opacity: outerPortfolioScrollable,
-          y: mainContentY
+          y: mainContentY,
+          filter: blurValue
         }}
       >
         <PortfolioComponent />

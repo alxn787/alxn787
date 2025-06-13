@@ -36,9 +36,7 @@ export default function Hero() {
 
 
   return (
-    <div className="relative">
-        
-
+    <div>
       <div className="h-[120vh] relative">
         <motion.div
           className="fixed inset-0 h-full w-full flex justify-center"

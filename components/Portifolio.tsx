@@ -82,7 +82,7 @@ export const PortfolioComponent = () => {
                 <ProjectCard Title='AlgoRush' Description='Matiks for DSA.' Imageurl='algorush.png' url='https://www.algorush.live/' />
                 <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' url='https://superdm.xyz/' />
                 <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' url='https://ezwallet-six.vercel.app/' />
-                <ProjectCard Title='FitFrame' Description='AI powered Fitness App' Imageurl='lg.png' url='https://fit-frame.vercel.app/'/>
+                <ProjectCard Title='FitFrame' Description='AI powered Fitness App' Imageurl='fitframe.png' url='https://fit-frame.vercel.app/'/>
             </div>
             <div
             onClick={scrollToSection}

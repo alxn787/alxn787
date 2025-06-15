@@ -58,15 +58,7 @@ const BlogPost = () => {
             <div className="text-gray-300 leading-relaxed">
               <ReactMarkdown
                 components={{
-                  h1: ({ children }) => <h1 className="text-3xl font-bold mb-6 text-white">{children}</h1>,
-                  h2: ({ children }) => <h2 className="text-2xl font-bold mb-4 mt-8 text-white">{children}</h2>,
-                  h3: ({ children }) => <h3 className="text-xl font-bold mb-3 mt-6 text-white">{children}</h3>,
-                  p: ({ children }) => <p className="mb-4 text-gray-300 leading-relaxed">{children}</p>,
-                  ul: ({ children }) => <ul className="list-disc list-inside mb-4 space-y-2 text-gray-300">{children}</ul>,
-                  li: ({ children }) => <li className="text-gray-300">{children}</li>,
-                  code: ({ children }) => <code className="bg-gray-800 px-2 py-1 rounded text-blue-300 text-sm">{children}</code>,
-                  pre: ({ children }) => <pre className="bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-700">{children}</pre>,
-                  img: ({ src, alt, title }) => (
+                    img: ({ src, alt, title }) => (
                     <div className="my-8 flex justify-center">
                       <div className="relative max-w-full">
                         <img
@@ -76,14 +68,17 @@ const BlogPost = () => {
                           className="rounded-lg shadow-2xl border border-gray-700 max-w-full h-auto"
                           style={{ maxHeight: '500px', objectFit: 'contain' }}
                         />
-                        {alt && (
-                          <p className="text-center text-sm text-gray-400 mt-2 italic">
-                            {alt}
-                          </p>
-                        )}
                       </div>
                     </div>
                   ),
+                  h1: ({ children }) => <h1 className="text-3xl font-bold mb-6 text-white">{children}</h1>,
+                  h2: ({ children }) => <h2 className="text-2xl font-bold mb-4 mt-8 text-white">{children}</h2>,
+                  h3: ({ children }) => <h3 className="text-xl font-bold mb-3 mt-6 text-white">{children}</h3>,
+                  p: ({ children }) => <p className="mb-4 text-gray-300 leading-relaxed">{children}</p>,
+                  ul: ({ children }) => <ul className="list-disc list-inside mb-4 space-y-2 text-gray-300">{children}</ul>,
+                  li: ({ children }) => <li className="text-gray-300">{children}</li>,
+                  code: ({ children }) => <code className="bg-gray-800 px-2 py-1 rounded text-blue-300 text-sm">{children}</code>,
+                  pre: ({ children }) => <pre className="bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-700">{children}</pre>,
                 }}
               >
                 {post.content}

@@ -64,11 +64,11 @@ export default function ProjectCard({
 
         </div>
         <div className={`${isHovered}== true ? visibility:visible  : visibility:hidden text-center gap-4`}>
-            <h3 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-1">
+            <h3 className="text-4xl font-bold text-white mb-1">
             {Title}
             </h3>
 
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-sm text-white/60">
             {Description}
             </p>
         </div>

@@ -68,7 +68,7 @@ export const PortfolioComponent = () => {
             </div>
             <div className='h-10'></div>
             <div>
-                <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
+                <h2 className='text-2xl text-white tracking-tighter font-bold uppercase '>
                     Experience
                 </h2>
             </div>
@@ -76,7 +76,7 @@ export const PortfolioComponent = () => {
 
             <div className='h-10'></div>
             <div>
-                <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
+                <h2 className='text-2xl text-white tracking-tighter font-bold uppercase '>
                     PROJECTS
                 </h2>
             </div>
@@ -99,7 +99,7 @@ export const PortfolioComponent = () => {
           id="skills" 
           className="my-16">
             <div>
-                <h2 className='text-2xl text-primary tracking-tighter font-bold uppercase '>
+                <h2 className='text-2xl text-white tracking-tighter font-bold uppercase '>
                     SKILLS
                 </h2>
             </div>

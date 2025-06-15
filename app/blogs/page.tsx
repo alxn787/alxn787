@@ -1,20 +1,21 @@
 'use client'
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock } from "lucide-react";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogdata";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Blogs = () => {
-
-
-  // Filter posts based on search term and selected tag
-
+    const router = useRouter();
 
   return (
     <div className="min-h-screen bg-gradient-to-br w-screen from-gray-900 via-black to-gray-900 text-white scroll-smooth">
       {/* Navigation */}
       <div className="h-20"></div>
         <div className="max-w-2xl mx-auto">
+        <div className="relative left-0 top-0 mb-5 cursor-pointer hover:text-white/80" onClick={()=>router.back()}>
+            <ArrowLeft/>
+        </div>
 
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white via-white/50 white/20 bg-clip-text text-transparent animate-fade-in">

@@ -60,19 +60,19 @@ This is the case of large cap stocks. Mid and small caps falls harder, gains eve
 
 ### 2. Confirm your Conviction with results
 
-There are possibilities that the company itself is going to shit and thats the reason it drops, to avoid such blunders take the financial reports for the past 5 years and check the growth(for small and midcap).
+There are possibilities that the company itself is going to shit and thats the reason it drops, to avoid such blunders take the financial reports for the past 3 years and check the growth(for small and midcap).
 
 ### 3. It's okay to not catch the extremes
 
 Nobody can catch every bottom or peak. average your buys and deal with it. Market was here before you were born and its gonna be here after you are dead. Its okay to miss executions, more will come 
 
-## PS
+## Takeaways
 
-Be the one who buys during the bear, not the one who panics
+Risk management and Position sizing is the key. Know how much you can afford to lose.
 
-Please for the love of god don't listen to finfluencers. your favorite YT trader struggles to make 15% a year and relies on selling courses for a living.
+Don't listen to finfluencers. Everyone's parroting the same book — “Don't buy a car,” “Rent instead of buying a house,” blah blah blah. Mf, am I supposed to take my girlfriend on a drive in a mutual fund? Life isn't a spreadsheet.Smart money isn't just about ROI — it's also about living. A car might depreciate, but memories don't.
 
-For people wondering why im making it public. If there are 1k visits about 50 will take it seriously. 10 will try to implement it and maybe 1-2 will stick with it until they see some results. Information is never the limiting reagent to success, discipline is.
+For people wondering why i'm making this public. For every 1k visits about 50 will take it seriously. 10 will try to implement it and maybe 1-2 will stick with it until they see some results. Information is never the limiting reagent to success, discipline is.
 
     `,
     image: "/placeholder.svg",
@@ -85,30 +85,8 @@ For people wondering why im making it public. If there are 1k visits about 50 wi
     title: "Fuck Rust",
     excerpt: "Me trying not to kill myself trying to write smart conttacts.",
     content: `
-# The Future of TypeScript
+# Fighting the urge to not smash my macbook away
 
-TypeScript continues to evolve, bringing new features that make development more enjoyable and productive.
-
-## Upcoming Features
-
-### 1. Better Type Inference
-The TypeScript team is constantly improving type inference, making it easier to write type-safe code without explicit annotations.
-
-### 2. Performance Improvements
-New versions focus on compilation speed and memory usage improvements.
-
-### 3. Enhanced Developer Experience
-Better error messages and IDE integration make TypeScript more accessible to developers.
-
-## Why TypeScript Matters
-
-TypeScript provides:
-- Static type checking
-- Better IDE support
-- Improved refactoring capabilities
-- Enhanced code documentation
-
-The future of web development is strongly typed, and TypeScript is leading the way.
     `,
     image: "/placeholder.svg",
     date: "2025-06-15",

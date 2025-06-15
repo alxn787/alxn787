@@ -1,13 +1,11 @@
 'use client'
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogdata";
 import Link from "next/link";
 
 const Blogs = () => {
 
-  // Get all unique tags
-  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
 
   // Filter posts based on search term and selected tag
 

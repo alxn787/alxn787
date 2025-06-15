@@ -1,0 +1,85 @@
+'use client'
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { Search, Calendar, Clock, ArrowLeft } from "lucide-react";
+import { blogPosts } from "@/data/blogdata";
+import { useState } from "react";
+import Link from "next/link";
+
+const Blogs = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+  // Get all unique tags
+  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
+
+  // Filter posts based on search term and selected tag
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesTag = !selectedTag || post.tags.includes(selectedTag);
+    return matchesSearch && matchesTag;
+  });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br w-screen from-gray-900 via-black to-gray-900 text-white scroll-smooth">
+      {/* Navigation */}
+      <div className="h-20"></div>
+        <div className="max-w-2xl mx-auto">
+
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white via-white/50 white/20 bg-clip-text text-transparent animate-fade-in">
+              Thoughts
+            </h1>
+          </div>
+          <div className="mb-8 space-y-4"></div>
+
+          <div className="flex flex-col gap-8 overflow-clip">
+            {filteredPosts.map((post) => (
+              <Link key={post.id} href={`/blogs/${post.id}`}>
+                <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover-scale group h-full">
+                  <CardContent className="p-0">
+                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-t-lg relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-4 left-4">
+                        <div className="flex gap-2">
+                          {post.tags.slice(0, 2).map((tag) => (
+                            <Badge key={tag} variant="secondary" className="text-xs bg-white/20 text-white">
+                              {tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      
+                      <div className="flex justify-between items-center text-xs text-gray-400">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-3 h-3" />
+                          <span>{new Date(post.date).toLocaleDateString()}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-3 h-3" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+    </div>
+  );
+};
+
+export default Blogs;

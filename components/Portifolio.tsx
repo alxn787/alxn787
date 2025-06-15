@@ -8,16 +8,17 @@ import { LinkedinIcon } from './linkedin';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
+import { useRouter } from 'next/navigation';
 
 export const PortfolioComponent = () => {
     const handleOpenInNewTab = (url: string) => {
     window.open(url, '_blank');
 };
   const sectionRef = useRef<HTMLDivElement>(null);
-
   const scrollToSection = () => {
     sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+  const router = useRouter();
 
   const skills = ["Next.js", "Typescript","Framer Motion","Figma", "C++"];
 
@@ -48,18 +49,22 @@ export const PortfolioComponent = () => {
             <div
             className='flex justify-start gap-4'>
                 <div className='flex' onClick={()=>handleOpenInNewTab('https://drive.google.com/file/d/1UYcK0OgTMUuf0mdD_M-JAnO3tKPaTxN-/view?usp=sharing')}>
-                        <FileTextIcon />
+                  <FileTextIcon />
+                  {/* <div className='text-sm flex flex-col items-center justify-center'>Resume</div> */}
                 </div>
                 <div className='flex' onClick={()=>handleOpenInNewTab('https://github.com/alxn787')}>
-                        <GithubIcon />
+                  <GithubIcon />
+                  {/* <div className='text-sm'>Github</div> */}
                 </div>
                 <div className='flex' onClick={()=>handleOpenInNewTab('https://x.com/alxn787')}>
                         <TwitterIcon />
+                  {/* <div className='text-sm'>Twitter</div> */}
                 </div>
                 <div className='flex' onClick={()=>handleOpenInNewTab('https://www.linkedin.com/in/alen-alex-abraham-301aba237/')}>
-                    <LinkedinIcon/>
+                  <LinkedinIcon/>
+                  {/* <div className='text-sm ml-1'>LinkedIn</div> */}
                 </div>
-                    
+                <div className='text-md mb-2 hover:text-blue-400 cursor-pointer' onClick={()=>router.push('/blogs')}>Blogs</div>
             </div>
             <div className='h-10'></div>
             <div>
@@ -88,9 +93,6 @@ export const PortfolioComponent = () => {
             className='text-white/50 flex justify-center cursor-pointer'>
                 More Projects on Github!
             </div>
-
-
-
           <motion.div 
           whileInView={{scale: 1.02, opacity: 1}}
           transition={{duration: 0.5}}

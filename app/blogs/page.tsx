@@ -1,26 +1,16 @@
 'use client'
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Search, Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { blogPosts } from "@/data/blogdata";
-import { useState } from "react";
 import Link from "next/link";
 
 const Blogs = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   // Get all unique tags
   const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
 
   // Filter posts based on search term and selected tag
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = !selectedTag || post.tags.includes(selectedTag);
-    return matchesSearch && matchesTag;
-  });
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br w-screen from-gray-900 via-black to-gray-900 text-white scroll-smooth">
@@ -36,7 +26,7 @@ const Blogs = () => {
           <div className="mb-8 space-y-4"></div>
 
           <div className="flex flex-col gap-8 ">
-            {filteredPosts.map((post) => (
+            {blogPosts.map((post) => (
               <Link key={post.id} href={`/blogs/${post.id}`}>
                 <Card className="bg-neutral-800/30 border-white/10 backdrop-blur-sm hover:bg-black/100 transition-all duration-300 hover-scale group h-full">
                   <CardContent className="p-0">

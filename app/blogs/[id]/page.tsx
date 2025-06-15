@@ -1,7 +1,6 @@
 'use client'
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
+import { ArrowLeft, Calendar } from "lucide-react";
 import { getBlogPostById } from "@/data/blogdata";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";

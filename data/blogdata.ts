@@ -70,7 +70,7 @@ Nobody can catch every bottom or peak. average your buys and deal with it. Marke
 
 Risk management and Position sizing is the key. Know how much you can afford to lose.
 
-Don't listen to finfluencers. Everyone's parroting the same book — “Don't buy a car,” “Rent instead of buying a house,” blah blah blah. Mf, am I supposed to take my girlfriend on a drive in a mutual fund? Life isn't a spreadsheet.Smart money isn't just about ROI — it's also about living. A car might depreciate, but memories don't.
+Don't listen to finfluencers. Everyone's parroting the same book — “Don't buy a car,” “Rent instead of buying a house,” blah blah blah. Mf, am I supposed to take my girlfriend on a drive in a mutual fund? Life isn't a spreadsheet, smart money isn't just about ROI — it's also about living. A car might depreciate, but memories don't.
 
 For people wondering why i'm making this public. For every 1k visits about 50 will take it seriously. 10 will try to implement it and maybe 1-2 will stick with it until they see some results. Information is never the limiting reagent to success, discipline is.
 

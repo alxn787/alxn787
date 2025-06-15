@@ -13,42 +13,77 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Building Modern Web Applications with React",
-    excerpt: "Explore the latest patterns and best practices for building scalable React applications in 2024.",
+    title: "Commonsense & Investing",
+    excerpt: "No fancy stuff. All it takes is commonsense. How to close green on a calendar year",
     content: `
-# Building Modern Web Applications with React
+# Step 1 
 
-React has evolved significantly over the years, and 2024 brings new patterns and best practices that can help you build better applications.
+First step to trading is to STAY AWAY FROM OPTIONS! so that you don't lose all your money and stop the next day.
 
-## Key Concepts
+We're not here to gamble or be rich in a day or a month. If yes, go ahead and play dream11 or stake. 
 
-### 1. Component Composition
-Component composition is at the heart of React development. By breaking down your UI into smaller, reusable components, you can create more maintainable and testable code.
+This is to make you close in green so that you can mess with options.
 
-### 2. State Management
-Modern React applications benefit from thoughtful state management. Whether you're using useState, useReducer, or external libraries like Zustand, the key is to keep your state predictable and easy to debug.
+I'll get back to options and indices on the next blogs.
 
-### 3. Performance Optimization
-React provides several tools for performance optimization, including React.memo, useMemo, and useCallback. Use these judiciously to prevent unnecessary re-renders.
+## Investing Rules
 
-## Best Practices
+### 1. Find a long term uptrend and short term down trend
 
-- Keep components small and focused
-- Use TypeScript for better developer experience
-- Implement proper error boundaries
-- Write tests for critical functionality
+![Trading Strategy](/invest1.png "Basic trading strategy")
 
-Building modern React applications is about finding the right balance between simplicity and functionality.
+The image is self-explanatory .Now this is Nifty . Lets take the fall from the recent highs
+
+26,272 to 21,741 - 17% fall .
+
+At the same time 
+
+tata motors fell from 1100 to 540 ~ 50%
+
+Hindalco from 765 to 550 - 27%
+
+Bel from 308 to 240 - 22%
+
+Its obvious the Indices are going to retrace to the highs, and when it does the individual stocks will too.
+
+The cool thing about this is , if a stock falls 50% and then retraces to the highs , then our returns would be 100%
+
+Basic math: 100 -> 50 ->100 100% returns
+
+Bel now at 394 - 64%
+Hindalco at 640 - 19% 
+
+All in a matter of 6 months and the highs havent been retraced yet
+
+This is the case of large cap stocks. Mid and small caps falls harder, gains even more . Do what you can with that info. 
+
+
+### 2. Confirm your Conviction with results
+
+There are possibilities that the company itself is going to shit and thats the reason it drops, to avoid such blunders take the financial reports for the past 5 years and check the growth(for small and midcap).
+
+### 3. It's okay to not catch the extremes
+
+Nobody can catch every bottom or peak. average your buys and deal with it. Market was here before you were born and its gonna be here after you are dead. Its okay to miss executions, more will come 
+
+## PS
+
+Be the one who buys during the bear, not the one who panics
+
+Please for the love of god don't listen to finfluencers. your favorite YT trader struggles to make 15% a year and relies on selling courses for a living.
+
+For people wondering why im making it public. If there are 1k visits about 50 will take it seriously. 10 will try to implement it and maybe 1-2 will stick with it until they see some results. Information is never the limiting reagent to success, discipline is.
+
     `,
     image: "/placeholder.svg",
-    date: "2024-01-15",
+    date: "2025-06-15",
     readTime: "5 min read",
     tags: ["React", "JavaScript", "Web Development"]
   },
   {
     id: "2",
-    title: "The Future of TypeScript",
-    excerpt: "Discover what's coming next in TypeScript and how it will shape the future of web development.",
+    title: "Fuck Rust",
+    excerpt: "Me trying not to kill myself trying to write smart conttacts.",
     content: `
 # The Future of TypeScript
 
@@ -76,54 +111,9 @@ TypeScript provides:
 The future of web development is strongly typed, and TypeScript is leading the way.
     `,
     image: "/placeholder.svg",
-    date: "2024-01-10",
+    date: "2025-06-15",
     readTime: "4 min read",
     tags: ["TypeScript", "Programming", "Developer Tools"]
-  },
-  {
-    id: "3",
-    title: "Mastering CSS Grid and Flexbox",
-    excerpt: "A comprehensive guide to modern CSS layout techniques that every developer should know.",
-    content: `
-# Mastering CSS Grid and Flexbox
-
-Modern CSS layout techniques have revolutionized how we build responsive web interfaces.
-
-## CSS Grid
-
-CSS Grid is perfect for two-dimensional layouts:
-
-\`\`\`css
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-\`\`\`
-
-## Flexbox
-
-Flexbox excels at one-dimensional layouts:
-
-\`\`\`css
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-\`\`\`
-
-## When to Use Each
-
-- **Grid**: Complex layouts, two-dimensional control
-- **Flexbox**: Simple layouts, one-dimensional control
-
-Understanding both techniques will make you a more effective frontend developer.
-    `,
-    image: "/placeholder.svg",
-    date: "2024-01-05",
-    readTime: "6 min read",
-    tags: ["CSS", "Layout", "Frontend"]
   }
 ];
 

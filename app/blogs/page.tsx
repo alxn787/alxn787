@@ -35,29 +35,17 @@ const Blogs = () => {
           </div>
           <div className="mb-8 space-y-4"></div>
 
-          <div className="flex flex-col gap-8 overflow-clip">
+          <div className="flex flex-col gap-8 ">
             {filteredPosts.map((post) => (
               <Link key={post.id} href={`/blogs/${post.id}`}>
-                <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover-scale group h-full">
+                <Card className="bg-neutral-800/30 border-white/10 backdrop-blur-sm hover:bg-black/100 transition-all duration-300 hover-scale group h-full">
                   <CardContent className="p-0">
-                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-t-lg relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      <div className="absolute bottom-4 left-4">
-                        <div className="flex gap-2">
-                          {post.tags.slice(0, 2).map((tag) => (
-                            <Badge key={tag} variant="secondary" className="text-xs bg-white/20 text-white">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
                     
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors line-clamp-2">
+                      <h3 className=" flex justify-center text-xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                      <p className="flex justify-center text-gray-300 text-sm mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
                       

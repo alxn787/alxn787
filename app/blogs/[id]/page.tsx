@@ -5,11 +5,12 @@ import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
 import { getBlogPostById } from "@/data/blogdata";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
   const post = id ? getBlogPostById(id) : null;
+  const router = useRouter();
 
   if (!post) {
     return (
@@ -28,45 +29,29 @@ const BlogPost = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Navigation */}
 
-      <article className="pt-24 pb-12 px-6">
+      <article className="pt-24 pb-6 px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Hero Image */}
-          <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg mb-8 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          </div>
-
-          {/* Post Header */}
-          <header className="mb-8">
-            <div className="flex flex-wrap gap-2 mb-4">
-              {post.tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
-                  {tag}
-                </Badge>
-              ))}
+            <div className="flex justify-between">
+                <div className="relative left-0 top-0 mb-5 cursor-pointer hover:text-white/80" onClick={()=>router.back()}>
+                    <ArrowLeft/>
+                </div>
+                <div className="flex items-center gap-6 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(post.date).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                    })}</span>
+                </div>
+                </div>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          {/* Post Header */}
+          <header className="mb-8">   
+            <h1 className="flex justify-center text-4xl md:text-5xl font-bold m-4 bg-gradient-to-r from-white via-white/80 to-white/60 bg-clip-text text-transparent">
               {post.title}
             </h1>
             
-            <p className="text-xl text-gray-300 mb-6">
-              {post.excerpt}
-            </p>
-            
-            <div className="flex items-center gap-6 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>{post.readTime}</span>
-              </div>
-            </div>
           </header>
 
           {/* Post Content */}
@@ -82,28 +67,30 @@ const BlogPost = () => {
                   li: ({ children }) => <li className="text-gray-300">{children}</li>,
                   code: ({ children }) => <code className="bg-gray-800 px-2 py-1 rounded text-blue-300 text-sm">{children}</code>,
                   pre: ({ children }) => <pre className="bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-700">{children}</pre>,
+                  img: ({ src, alt, title }) => (
+                    <div className="my-8 flex justify-center">
+                      <div className="relative max-w-full">
+                        <img
+                          src={src}
+                          alt={alt || "Blog image"}
+                          title={title}
+                          className="rounded-lg shadow-2xl border border-gray-700 max-w-full h-auto"
+                          style={{ maxHeight: '500px', objectFit: 'contain' }}
+                        />
+                        {alt && (
+                          <p className="text-center text-sm text-gray-400 mt-2 italic">
+                            {alt}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ),
                 }}
               >
                 {post.content}
               </ReactMarkdown>
             </div>
           </div>
-
-          {/* Post Footer */}
-          <footer className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex justify-between items-center">
-              <Link href="/blogs">
-                <Button variant="outline" className="border-white/20 hover:bg-white/10">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Back to All Posts
-                </Button>
-              </Link>
-              <Button variant="outline" className="border-white/20 hover:bg-white/10">
-                <Share2 className="w-4 h-4 mr-2" />
-                Share this post
-              </Button>
-            </div>
-          </footer>
         </div>
       </article>
     </div>

@@ -28,7 +28,7 @@ I'll get back to options and indices on the next blogs.
 
 ## Investing Rules
 
-### 1. Find a long term uptrend and short term down trend
+### 1. Find a long term uptrend and its retracements
 
 ![Trading Strategy](/invest1.png "Basic trading strategy")
 
@@ -83,7 +83,7 @@ For people wondering why i'm making this public. For every 1k visits about 50 wi
   {
     id: "2",
     title: "Fuck Rust",
-    excerpt: "Me trying not to kill myself trying to write smart conttacts.",
+    excerpt: "Me trying not to kill myself trying to write smart contracts.",
     content: `
 # Fighting the urge to not smash my macbook away
 

@@ -22,7 +22,7 @@ First step to trading is to STAY AWAY FROM OPTIONS! so that you don't lose all y
 
 We're not here to gamble or be rich in a day or a month. If yes, go ahead and play dream11 or stake. 
 
-This is to make you close in green so that you can mess with options.
+This is to make you close in green so that you have the confidence to play with options.
 
 I'll get back to options and indices on the next blogs.
 
@@ -64,7 +64,7 @@ There are possibilities that the company itself is going to shit and thats the r
 
 ### 3. It's okay to not catch the extremes
 
-Nobody can catch every bottom or peak. average your buys and deal with it. Market was here before you were born and its gonna be here after you are dead. Its okay to miss executions, more will come 
+Nobody can catch every bottom or peak. average your buys and deal with it. Market was here before you were born and its gonna be here after you are dead. Its okay to miss executions, more will come .
 
 ## Takeaways
 

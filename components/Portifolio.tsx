@@ -20,7 +20,7 @@ export const PortfolioComponent = () => {
   };
   const router = useRouter();
 
-  const skills = ["Next.js", "Typescript","Framer Motion","Figma", "C++"];
+  // const skills = ["Next.js", "Typescript","Framer Motion","Figma", "C++"];
 
   return (
     <div className="bg-[#000000] text-neutral-200 font-sans leading-relaxed">

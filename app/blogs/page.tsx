@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogdata";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import GlassNavbar from "@/components/GlassNavbar";
 
 const Blogs = () => {
     const router = useRouter();

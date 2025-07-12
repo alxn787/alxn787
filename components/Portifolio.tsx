@@ -83,6 +83,8 @@ export const PortfolioComponent = () => {
             <div className='h-5'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                
+                <ProjectCard Title='INRC' Description='Indian Rupee on chain' Imageurl='inrc.jpg' url='https://github.com/alxn787/INRC' />
                 <ProjectCard Title='AlgoRush' Description='Matiks for DSA. 300+users' Imageurl='algorush.png' url='https://www.algorush.live/' />
                 <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' url='https://superdm.xyz/' />
                 <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' url='https://ezwallet-six.vercel.app/' />

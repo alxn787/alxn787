@@ -101,11 +101,11 @@ export const PortfolioComponent = () => {
           transition={{duration: 0.5}}
           id="skills" 
           className="my-16">
-            <div>
+            {/* <div>
                 <h2 className='text-2xl text-white tracking-tighter font-bold uppercase '>
                     SKILLS
                 </h2>
-            </div>
+            </div> */}
             <div className='h-5'></div>
             <div className="flex flex-wrap gap-3">
               {/* {skills.map(skill => (

@@ -85,10 +85,11 @@ export const PortfolioComponent = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <ProjectCard Title='CodeSpace' Description='Isolated Codespaces for React and Nodejs via K8s' Imageurl='codespace.png' url='https://github.com/alxn787/codespace' />
                 <ProjectCard Title='Payment Gateway' Description='Payment Gateway with private key management and adrress sweeping via indexer' Imageurl='gateway.png' url='https://github.com/alxn787/Payment-gateway' />
-                <ProjectCard Title='INRC' Description='Indian Rupee on chain' Imageurl='inrc.jpg' url='https://github.com/alxn787/INRC' />
                 <ProjectCard Title='AlgoRush' Description='Matiks for DSA. 300+users' Imageurl='algorush.png' url='https://www.algorush.live/' />
-                <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' url='https://superdm.xyz/' />
+                <ProjectCard Title='PromoChain' Description='Marketing Made Better.' Imageurl='promo.png' url='https://superdm.xyz/' />
+                <ProjectCard Title='SuperDm' Description='Superchats on Solana.' Imageurl='superdm.png' url='https://promo-chained.vercel.app/'/>
                 <ProjectCard Title='ezWallet' Description='Trade on Solana.' Imageurl='ezwallet.png' url='https://ezwallet-six.vercel.app/' />
+                <ProjectCard Title='INRC' Description='Indian Rupee on chain' Imageurl='inrc.jpg' url='https://github.com/alxn787/INRC' />
                 <ProjectCard Title='FitFrame' Description='AI powered Fitness App' Imageurl='fitframe.png' url='https://fit-frame.vercel.app/'/>
             </div>
             <div

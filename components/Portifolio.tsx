@@ -48,19 +48,19 @@ export const PortfolioComponent = () => {
             <div className='h-5'></div>
             <div
             className='flex justify-start gap-4'>
-                <div className='flex' onClick={()=>handleOpenInNewTab('https://drive.google.com/file/d/1UYcK0OgTMUuf0mdD_M-JAnO3tKPaTxN-/view?usp=sharing')}>
+                <div className='flex cursor-pointer' onClick={()=>handleOpenInNewTab('https://drive.google.com/file/d/1UYcK0OgTMUuf0mdD_M-JAnO3tKPaTxN-/view?usp=sharing')}>
                   <FileTextIcon />
                   {/* <div className='text-sm flex flex-col items-center justify-center'>Resume</div> */}
                 </div>
-                <div className='flex' onClick={()=>handleOpenInNewTab('https://github.com/alxn787')}>
+                <div className='flex cursor-pointer' onClick={()=>handleOpenInNewTab('https://github.com/alxn787')}>
                   <GithubIcon />
                   {/* <div className='text-sm'>Github</div> */}
                 </div>
-                <div className='flex' onClick={()=>handleOpenInNewTab('https://x.com/alxn787')}>
+                <div className='flex cursor-pointer' onClick={()=>handleOpenInNewTab('https://x.com/alxn787')}>
                         <TwitterIcon />
                   {/* <div className='text-sm'>Twitter</div> */}
                 </div>
-                <div className='flex' onClick={()=>handleOpenInNewTab('https://www.linkedin.com/in/alen-alex-abraham-301aba237/')}>
+                <div className='flex cursor-pointer' onClick={()=>handleOpenInNewTab('https://www.linkedin.com/in/alen-alex-abraham-301aba237/')}>
                   <LinkedinIcon/>
                   {/* <div className='text-sm ml-1'>LinkedIn</div> */}
                 </div>

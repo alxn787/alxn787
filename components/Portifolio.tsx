@@ -48,7 +48,7 @@ export const PortfolioComponent = () => {
             <div className='h-5'></div>
             <div
             className='flex justify-start gap-4'>
-                <div className='flex cursor-pointer' onClick={()=>handleOpenInNewTab('https://drive.google.com/file/d/1UYcK0OgTMUuf0mdD_M-JAnO3tKPaTxN-/view?usp=sharing')}>
+                <div className='flex cursor-pointer' onClick={()=>handleOpenInNewTab('https://drive.google.com/file/d/11dKyqhFKR6wZrtVzPvsS8yN2ChYgkjdi/view?usp=sharing')}>
                   <FileTextIcon />
                   {/* <div className='text-sm flex flex-col items-center justify-center'>Resume</div> */}
                 </div>
